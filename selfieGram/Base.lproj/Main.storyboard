@@ -67,21 +67,55 @@
             </objects>
             <point key="canvasLocation" x="994" y="-582"/>
         </scene>
-        <!--View Controller-->
+        <!--Profile View Controller-->
         <scene sceneID="fiO-rV-09n">
             <objects>
-                <viewController id="Bsa-xk-Wv2" sceneMemberID="viewController">
+                <viewController id="Bsa-xk-Wv2" customClass="ProfileViewController" customModule="selfieGram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vak-NQ-s18">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="koF-n6-jEX">
+                                <rect key="frame" x="148" y="299" width="79" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="8NB-We-kg5">
+                                <rect key="frame" x="97.5" y="84" width="180" height="185"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="9sw-zi-6AE"/>
+                                    <constraint firstAttribute="height" constant="185" id="rPx-zt-YhX"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHe-Cq-EtO">
+                                <rect key="frame" x="97.5" y="269" width="54" height="30"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="cameraButtonPressed:" destination="Bsa-xk-Wv2" eventType="touchUpInside" id="pqx-9A-7JF"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="zHe-Cq-EtO" firstAttribute="top" secondItem="8NB-We-kg5" secondAttribute="bottom" id="EEB-8C-4wH"/>
+                            <constraint firstItem="8NB-We-kg5" firstAttribute="top" secondItem="enL-6z-4EF" secondAttribute="top" constant="20" id="Fdx-uX-ANR"/>
+                            <constraint firstItem="koF-n6-jEX" firstAttribute="centerX" secondItem="Vak-NQ-s18" secondAttribute="centerX" id="KLT-vp-M29"/>
+                            <constraint firstItem="koF-n6-jEX" firstAttribute="top" secondItem="8NB-We-kg5" secondAttribute="bottom" constant="30" id="arZ-qc-7H0"/>
+                            <constraint firstItem="8NB-We-kg5" firstAttribute="centerX" secondItem="Vak-NQ-s18" secondAttribute="centerX" id="ikg-bB-LJs"/>
+                            <constraint firstItem="8NB-We-kg5" firstAttribute="leading" secondItem="zHe-Cq-EtO" secondAttribute="trailing" constant="-54" id="rTY-u7-iSR"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="enL-6z-4EF"/>
                     </view>
                     <navigationItem key="navigationItem" id="Lxi-6c-9u8"/>
+                    <connections>
+                        <outlet property="profileImageView" destination="8NB-We-kg5" id="xiU-ho-AhN"/>
+                        <outlet property="usernameLabel" destination="koF-n6-jEX" id="ScR-XM-M3V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rNN-UN-RfL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="994" y="188"/>
+            <point key="canvasLocation" x="992.79999999999995" y="187.55622188905548"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zyN-LD-SMU">
@@ -169,5 +203,6 @@
         <image name="Activities" width="25" height="25"/>
         <image name="NewsFeed" width="25" height="25"/>
         <image name="Profile" width="25" height="25"/>
+        <image name="placeholder" width="256" height="256"/>
     </resources>
 </document>
