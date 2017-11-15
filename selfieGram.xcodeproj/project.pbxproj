@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1702271D1FBBC36C008F06EA /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1702271C1FBBC36C008F06EA /* FeedViewController.swift */; };
 		171B91B71FB28C50004D600E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171B91B61FB28C50004D600E /* ProfileViewController.swift */; };
+		171B91B91FB5335F004D600E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171B91B81FB5335F004D600E /* User.swift */; };
+		171B91BB1FB5351B004D600E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171B91BA1FB5351B004D600E /* Post.swift */; };
 		17AA72B01FABE1E10042FFEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA72AF1FABE1E10042FFEE /* AppDelegate.swift */; };
 		17AA72B21FABE1E10042FFEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA72B11FABE1E10042FFEE /* ViewController.swift */; };
 		17AA72B51FABE1E10042FFEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17AA72B31FABE1E10042FFEE /* Main.storyboard */; };
@@ -35,7 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1702271C1FBBC36C008F06EA /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		171B91B61FB28C50004D600E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		171B91B81FB5335F004D600E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		171B91BA1FB5351B004D600E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		17AA72AC1FABE1E00042FFEE /* selfieGram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = selfieGram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17AA72AF1FABE1E10042FFEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17AA72B11FABE1E10042FFEE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +108,9 @@
 				17AA72AF1FABE1E10042FFEE /* AppDelegate.swift */,
 				17AA72B11FABE1E10042FFEE /* ViewController.swift */,
 				17AA72B31FABE1E10042FFEE /* Main.storyboard */,
+				1702271C1FBBC36C008F06EA /* FeedViewController.swift */,
+				171B91B81FB5335F004D600E /* User.swift */,
+				171B91BA1FB5351B004D600E /* Post.swift */,
 				171B91B61FB28C50004D600E /* ProfileViewController.swift */,
 				17AA72B61FABE1E10042FFEE /* Assets.xcassets */,
 				17AA72B81FABE1E10042FFEE /* LaunchScreen.storyboard */,
@@ -262,9 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				171B91B91FB5335F004D600E /* User.swift in Sources */,
 				171B91B71FB28C50004D600E /* ProfileViewController.swift in Sources */,
 				17AA72B21FABE1E10042FFEE /* ViewController.swift in Sources */,
 				17AA72B01FABE1E10042FFEE /* AppDelegate.swift in Sources */,
+				1702271D1FBBC36C008F06EA /* FeedViewController.swift in Sources */,
+				171B91BB1FB5351B004D600E /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
