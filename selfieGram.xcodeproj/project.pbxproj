@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1702271D1FBBC36C008F06EA /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1702271C1FBBC36C008F06EA /* FeedViewController.swift */; };
+		1702271F1FBE6324008F06EA /* SelfieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1702271E1FBE6324008F06EA /* SelfieCell.swift */; };
 		171B91B71FB28C50004D600E /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171B91B61FB28C50004D600E /* ProfileViewController.swift */; };
 		171B91B91FB5335F004D600E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171B91B81FB5335F004D600E /* User.swift */; };
 		171B91BB1FB5351B004D600E /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171B91BA1FB5351B004D600E /* Post.swift */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		1702271C1FBBC36C008F06EA /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		1702271E1FBE6324008F06EA /* SelfieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfieCell.swift; sourceTree = "<group>"; };
 		171B91B61FB28C50004D600E /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		171B91B81FB5335F004D600E /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		171B91BA1FB5351B004D600E /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				17AA72AF1FABE1E10042FFEE /* AppDelegate.swift */,
 				17AA72B11FABE1E10042FFEE /* ViewController.swift */,
 				17AA72B31FABE1E10042FFEE /* Main.storyboard */,
+				1702271E1FBE6324008F06EA /* SelfieCell.swift */,
 				1702271C1FBBC36C008F06EA /* FeedViewController.swift */,
 				171B91B81FB5335F004D600E /* User.swift */,
 				171B91BA1FB5351B004D600E /* Post.swift */,
@@ -273,6 +276,7 @@
 			files = (
 				171B91B91FB5335F004D600E /* User.swift in Sources */,
 				171B91B71FB28C50004D600E /* ProfileViewController.swift in Sources */,
+				1702271F1FBE6324008F06EA /* SelfieCell.swift in Sources */,
 				17AA72B21FABE1E10042FFEE /* ViewController.swift in Sources */,
 				17AA72B01FABE1E10042FFEE /* AppDelegate.swift in Sources */,
 				1702271D1FBBC36C008F06EA /* FeedViewController.swift in Sources */,

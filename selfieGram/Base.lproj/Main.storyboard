@@ -13,18 +13,52 @@
         <scene sceneID="GxE-LN-Oi8">
             <objects>
                 <tableViewController id="hoh-ca-MFK" customClass="FeedViewController" customModule="selfieGram" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="meC-ji-nVj">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="320" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="meC-ji-nVj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" id="IXT-Wn-g19">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="320" id="IXT-Wn-g19" customClass="SelfieCell" customModule="selfieGram" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="320"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IXT-Wn-g19" id="nbO-NB-w4D">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="319.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Urx-yt-Idi">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="250" id="nnF-p7-2kX"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6a-HW-Uh7">
+                                            <rect key="frame" x="0.0" y="258" width="79" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nue-ws-Tm8">
+                                            <rect key="frame" x="0.0" y="287" width="75" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Nue-ws-Tm8" firstAttribute="leading" secondItem="nbO-NB-w4D" secondAttribute="leading" id="BeI-9f-iGE"/>
+                                        <constraint firstItem="K6a-HW-Uh7" firstAttribute="top" secondItem="Urx-yt-Idi" secondAttribute="bottom" constant="8" id="CET-f2-XMG"/>
+                                        <constraint firstItem="K6a-HW-Uh7" firstAttribute="leading" secondItem="nbO-NB-w4D" secondAttribute="leading" id="IKx-cQ-TZD"/>
+                                        <constraint firstItem="Urx-yt-Idi" firstAttribute="leading" secondItem="nbO-NB-w4D" secondAttribute="leading" id="J5o-g8-nba"/>
+                                        <constraint firstItem="Urx-yt-Idi" firstAttribute="top" secondItem="nbO-NB-w4D" secondAttribute="top" id="Jvf-SS-1wf"/>
+                                        <constraint firstAttribute="trailing" secondItem="Urx-yt-Idi" secondAttribute="trailing" id="RSn-Hz-lyF"/>
+                                        <constraint firstItem="Nue-ws-Tm8" firstAttribute="top" secondItem="K6a-HW-Uh7" secondAttribute="bottom" constant="8" id="Twu-fY-yv3"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="commentLabel" destination="Nue-ws-Tm8" id="MAX-k2-Jpb"/>
+                                    <outlet property="selfieImageView" destination="Urx-yt-Idi" id="gpu-nV-WCq"/>
+                                    <outlet property="usernameLabel" destination="K6a-HW-Uh7" id="VWo-eb-7ve"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -32,7 +66,13 @@
                             <outlet property="delegate" destination="hoh-ca-MFK" id="Shc-AJ-zru"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Wi9-cf-1ei"/>
+                    <navigationItem key="navigationItem" id="Wi9-cf-1ei">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="pui-pY-Vya">
+                            <connections>
+                                <action selector="cameraButtonPressed:" destination="hoh-ca-MFK" id="wAJ-Ik-kA6"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QgX-ha-xXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -132,9 +172,9 @@
                         </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
+                        <segue destination="9QV-J7-92y" kind="relationship" relationship="viewControllers" id="X9E-jW-qMc"/>
                         <segue destination="vNY-ct-1UO" kind="relationship" relationship="viewControllers" id="E1g-tr-u8h"/>
                         <segue destination="H4v-mr-SN0" kind="relationship" relationship="viewControllers" id="kge-NY-ehw"/>
-                        <segue destination="9QV-J7-92y" kind="relationship" relationship="viewControllers" id="X9E-jW-qMc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t1q-EK-fwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
