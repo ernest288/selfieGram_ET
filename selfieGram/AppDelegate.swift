@@ -10,6 +10,7 @@ import UIKit
 import Parse
 
 @UIApplicationMain
+
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
@@ -22,6 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             clientConfiguration.applicationId = "myAppId"
             clientConfiguration.server = "https://mysterious-refuge-20042.herokuapp.com/parse"
         }
+        
+        Post.registerSubclass()
         Parse.initialize(with: configuration)
         
         let user = PFUser()
