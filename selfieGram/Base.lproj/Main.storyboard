@@ -5,6 +5,7 @@
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -43,6 +44,18 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gl9-qm-fIa">
+                                            <rect key="frame" x="328" y="258" width="23" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="23" id="Baq-ea-gsd"/>
+                                                <constraint firstAttribute="height" constant="20" id="NQ4-yA-m4E"/>
+                                            </constraints>
+                                            <state key="normal" image="hearts-off"/>
+                                            <state key="selected" image="hearts-on"/>
+                                            <connections>
+                                                <action selector="likeButtonClicked:" destination="IXT-Wn-g19" eventType="touchUpInside" id="lDx-fw-XKv"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="Nue-ws-Tm8" firstAttribute="leading" secondItem="nbO-NB-w4D" secondAttribute="leading" id="BeI-9f-iGE"/>
@@ -51,7 +64,9 @@
                                         <constraint firstItem="Urx-yt-Idi" firstAttribute="leading" secondItem="nbO-NB-w4D" secondAttribute="leading" id="J5o-g8-nba"/>
                                         <constraint firstItem="Urx-yt-Idi" firstAttribute="top" secondItem="nbO-NB-w4D" secondAttribute="top" id="Jvf-SS-1wf"/>
                                         <constraint firstAttribute="trailing" secondItem="Urx-yt-Idi" secondAttribute="trailing" id="RSn-Hz-lyF"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="gl9-qm-fIa" secondAttribute="trailing" constant="8" id="TmM-X9-vCa"/>
                                         <constraint firstItem="Nue-ws-Tm8" firstAttribute="top" secondItem="K6a-HW-Uh7" secondAttribute="bottom" constant="8" id="Twu-fY-yv3"/>
+                                        <constraint firstItem="gl9-qm-fIa" firstAttribute="top" secondItem="Urx-yt-Idi" secondAttribute="bottom" constant="8" id="VGv-Ml-gUt"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -243,6 +258,8 @@
         <image name="Activities" width="25" height="25"/>
         <image name="NewsFeed" width="25" height="25"/>
         <image name="Profile" width="25" height="25"/>
+        <image name="hearts-off" width="42" height="37"/>
+        <image name="hearts-on" width="42" height="37"/>
         <image name="placeholder" width="256" height="256"/>
     </resources>
 </document>

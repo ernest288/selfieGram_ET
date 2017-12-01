@@ -19,6 +19,7 @@
 		17AA72BA1FABE1E10042FFEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17AA72B81FABE1E10042FFEE /* LaunchScreen.storyboard */; };
 		17AA72C51FABE1E10042FFEE /* selfieGramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA72C41FABE1E10042FFEE /* selfieGramTests.swift */; };
 		17AA72D01FABE1E10042FFEE /* selfieGramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA72CF1FABE1E10042FFEE /* selfieGramUITests.swift */; };
+		17B2BD271FD0E3AA00A141AC /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B2BD261FD0E3AA00A141AC /* Activity.swift */; };
 		26DBF86E9BBEC84412B6202F /* Pods_selfieGramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41842A6001C07BE7126DA271 /* Pods_selfieGramUITests.framework */; };
 		63499790C7DA31B49016A2E6 /* Pods_selfieGram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1ECFCFD947C494FA1DF00E9 /* Pods_selfieGram.framework */; };
 		A0B410A4BAAD5B00184348DF /* Pods_selfieGramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC44E644AB7F9CB8204A767A /* Pods_selfieGramTests.framework */; };
@@ -61,6 +62,7 @@
 		17AA72CB1FABE1E10042FFEE /* selfieGramUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = selfieGramUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17AA72CF1FABE1E10042FFEE /* selfieGramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selfieGramUITests.swift; sourceTree = "<group>"; };
 		17AA72D11FABE1E10042FFEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17B2BD261FD0E3AA00A141AC /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		1E750DFB1BA7426FC1D3E8EF /* Pods-selfieGramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-selfieGramTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-selfieGramTests/Pods-selfieGramTests.release.xcconfig"; sourceTree = "<group>"; };
 		41842A6001C07BE7126DA271 /* Pods_selfieGramUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_selfieGramUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46399594134A934D6D21CE95 /* Pods-selfieGramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-selfieGramTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-selfieGramTests/Pods-selfieGramTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				17AA72B61FABE1E10042FFEE /* Assets.xcassets */,
 				17AA72B81FABE1E10042FFEE /* LaunchScreen.storyboard */,
 				17AA72BB1FABE1E10042FFEE /* Info.plist */,
+				17B2BD261FD0E3AA00A141AC /* Activity.swift */,
 			);
 			path = selfieGram;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				17AA72B21FABE1E10042FFEE /* ViewController.swift in Sources */,
 				17AA72B01FABE1E10042FFEE /* AppDelegate.swift in Sources */,
 				1702271D1FBBC36C008F06EA /* FeedViewController.swift in Sources */,
+				17B2BD271FD0E3AA00A141AC /* Activity.swift in Sources */,
 				171B91BB1FB5351B004D600E /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
