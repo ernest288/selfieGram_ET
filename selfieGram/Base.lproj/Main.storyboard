@@ -18,6 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="postCell" rowHeight="320" id="IXT-Wn-g19" customClass="SelfieCell" customModule="selfieGram" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="320"/>
@@ -56,10 +57,19 @@
                                                 <action selector="likeButtonClicked:" destination="IXT-Wn-g19" eventType="touchUpInside" id="lDx-fw-XKv"/>
                                             </connections>
                                         </button>
+                                        <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hearts-on" translatesAutoresizingMaskIntoConstraints="NO" id="N3B-aE-pr5">
+                                            <rect key="frame" x="175.5" y="115" width="23" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="23" id="Pe8-2D-jvg"/>
+                                                <constraint firstAttribute="height" constant="20" id="bYP-7a-DY9"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="N3B-aE-pr5" firstAttribute="centerY" secondItem="Urx-yt-Idi" secondAttribute="centerY" id="4SQ-2q-mxZ"/>
                                         <constraint firstItem="Nue-ws-Tm8" firstAttribute="leading" secondItem="nbO-NB-w4D" secondAttribute="leading" id="BeI-9f-iGE"/>
                                         <constraint firstItem="K6a-HW-Uh7" firstAttribute="top" secondItem="Urx-yt-Idi" secondAttribute="bottom" constant="8" id="CET-f2-XMG"/>
+                                        <constraint firstItem="N3B-aE-pr5" firstAttribute="centerX" secondItem="Urx-yt-Idi" secondAttribute="centerX" id="G3H-af-2dO"/>
                                         <constraint firstItem="K6a-HW-Uh7" firstAttribute="leading" secondItem="nbO-NB-w4D" secondAttribute="leading" id="IKx-cQ-TZD"/>
                                         <constraint firstItem="Urx-yt-Idi" firstAttribute="leading" secondItem="nbO-NB-w4D" secondAttribute="leading" id="J5o-g8-nba"/>
                                         <constraint firstItem="Urx-yt-Idi" firstAttribute="top" secondItem="nbO-NB-w4D" secondAttribute="top" id="Jvf-SS-1wf"/>
@@ -71,6 +81,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="commentLabel" destination="Nue-ws-Tm8" id="MAX-k2-Jpb"/>
+                                    <outlet property="heartAnimationView" destination="N3B-aE-pr5" id="qR8-cy-OJq"/>
                                     <outlet property="likeButton" destination="gl9-qm-fIa" id="bCw-Ot-eoM"/>
                                     <outlet property="selfieImageView" destination="Urx-yt-Idi" id="gpu-nV-WCq"/>
                                     <outlet property="usernameLabel" destination="K6a-HW-Uh7" id="VWo-eb-7ve"/>
@@ -80,6 +91,7 @@
                         <connections>
                             <outlet property="dataSource" destination="hoh-ca-MFK" id="96Q-94-lv3"/>
                             <outlet property="delegate" destination="hoh-ca-MFK" id="Shc-AJ-zru"/>
+                            <outletCollection property="gestureRecognizers" destination="qDX-T9-RE0" appends="YES" id="SFn-4H-qD3"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Wi9-cf-1ei">
@@ -89,26 +101,46 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="hyv-IS-BZo">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="refreshPulled:" destination="hoh-ca-MFK" eventType="valueChanged" id="ffT-yK-mGs"/>
+                        </connections>
+                    </refreshControl>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QgX-ha-xXe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="qDX-T9-RE0">
+                    <connections>
+                        <action selector="doubleTappedSelfie:" destination="hoh-ca-MFK" id="jUT-Fe-VAO"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="993" y="-1314"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Activity View Controller-->
         <scene sceneID="eNp-zo-PZ0">
             <objects>
-                <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="d2N-Jg-r4I" sceneMemberID="viewController">
+                <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="d2N-Jg-r4I" customClass="ActivityViewController" customModule="selfieGram" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="DWj-6J-Vei">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="TYz-Lb-Fa7">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="activityCell" textLabel="FK2-ui-Zj7" style="IBUITableViewCellStyleDefault" id="TYz-Lb-Fa7" customClass="ActivityCell" customModule="selfieGram" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TYz-Lb-Fa7" id="9LE-Sf-gqv">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="FK2-ui-Zj7">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>

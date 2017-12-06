@@ -17,6 +17,7 @@ class SelfieCell: UITableViewCell {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var likeButton: UIButton!
+    @IBOutlet weak var heartAnimationView: UIImageView!
     
     var post:Post? {
         
@@ -66,7 +67,32 @@ class SelfieCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
+    func tapAnimation() {
+        // set heartAnimationView to be very tiny and not hidden
+        self.heartAnimationView.isHidden = false
+        self.heartAnimationView.transform = CGAffineTransform(scaleX: 0, y: 0)
+        
+        //animation for 1 second, no delay
+        UIView.animate(withDuration: 1.0, delay: 0, options: [], animations: { () -> Void in
+            
+            // during our animation change heartAnimationView to be 3X what it is on storyboard
+            self.heartAnimationView.transform = CGAffineTransform(scaleX: 3, y: 3)
+            
+        }) { (success) -> Void in
+            UIView.animate(withDuration: 1.0, delay: 0, options: [], animations: { () -> Void in
+                
+                // during our animation change heartAnimationView to be 3X what it is on storyboard
+                self.heartAnimationView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+                
+            }) { (success) -> Void in
+                self.heartAnimationView.isHidden = true
+            }
+        }
+         likeButtonClicked(likeButton)
 
+    }
+    
     @IBAction func likeButtonClicked(_ sender: UIButton) {
         // the ! symbol means NOT
         // We are therefore setting the button's selected state to

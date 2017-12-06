@@ -20,6 +20,8 @@
 		17AA72C51FABE1E10042FFEE /* selfieGramTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA72C41FABE1E10042FFEE /* selfieGramTests.swift */; };
 		17AA72D01FABE1E10042FFEE /* selfieGramUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17AA72CF1FABE1E10042FFEE /* selfieGramUITests.swift */; };
 		17B2BD271FD0E3AA00A141AC /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B2BD261FD0E3AA00A141AC /* Activity.swift */; };
+		17B2BD291FD76C7300A141AC /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B2BD281FD76C7300A141AC /* ActivityViewController.swift */; };
+		17B2BD2B1FD76CBC00A141AC /* ActivityCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B2BD2A1FD76CBC00A141AC /* ActivityCell.swift */; };
 		26DBF86E9BBEC84412B6202F /* Pods_selfieGramUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41842A6001C07BE7126DA271 /* Pods_selfieGramUITests.framework */; };
 		63499790C7DA31B49016A2E6 /* Pods_selfieGram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1ECFCFD947C494FA1DF00E9 /* Pods_selfieGram.framework */; };
 		A0B410A4BAAD5B00184348DF /* Pods_selfieGramTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC44E644AB7F9CB8204A767A /* Pods_selfieGramTests.framework */; };
@@ -63,6 +65,8 @@
 		17AA72CF1FABE1E10042FFEE /* selfieGramUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = selfieGramUITests.swift; sourceTree = "<group>"; };
 		17AA72D11FABE1E10042FFEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17B2BD261FD0E3AA00A141AC /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		17B2BD281FD76C7300A141AC /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		17B2BD2A1FD76CBC00A141AC /* ActivityCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCell.swift; sourceTree = "<group>"; };
 		1E750DFB1BA7426FC1D3E8EF /* Pods-selfieGramTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-selfieGramTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-selfieGramTests/Pods-selfieGramTests.release.xcconfig"; sourceTree = "<group>"; };
 		41842A6001C07BE7126DA271 /* Pods_selfieGramUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_selfieGramUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		46399594134A934D6D21CE95 /* Pods-selfieGramTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-selfieGramTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-selfieGramTests/Pods-selfieGramTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +133,8 @@
 				17AA72AF1FABE1E10042FFEE /* AppDelegate.swift */,
 				17AA72B11FABE1E10042FFEE /* ViewController.swift */,
 				17AA72B31FABE1E10042FFEE /* Main.storyboard */,
+				17B2BD2A1FD76CBC00A141AC /* ActivityCell.swift */,
+				17B2BD281FD76C7300A141AC /* ActivityViewController.swift */,
 				1702271E1FBE6324008F06EA /* SelfieCell.swift */,
 				1702271C1FBBC36C008F06EA /* FeedViewController.swift */,
 				171B91B81FB5335F004D600E /* User.swift */,
@@ -480,8 +486,10 @@
 			files = (
 				171B91B91FB5335F004D600E /* User.swift in Sources */,
 				171B91B71FB28C50004D600E /* ProfileViewController.swift in Sources */,
+				17B2BD2B1FD76CBC00A141AC /* ActivityCell.swift in Sources */,
 				1702271F1FBE6324008F06EA /* SelfieCell.swift in Sources */,
 				17AA72B21FABE1E10042FFEE /* ViewController.swift in Sources */,
+				17B2BD291FD76C7300A141AC /* ActivityViewController.swift in Sources */,
 				17AA72B01FABE1E10042FFEE /* AppDelegate.swift in Sources */,
 				1702271D1FBBC36C008F06EA /* FeedViewController.swift in Sources */,
 				17B2BD271FD0E3AA00A141AC /* Activity.swift in Sources */,
