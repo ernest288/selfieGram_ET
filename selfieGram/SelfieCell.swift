@@ -78,18 +78,11 @@ class SelfieCell: UITableViewCell {
             
             // during our animation change heartAnimationView to be 3X what it is on storyboard
             self.heartAnimationView.transform = CGAffineTransform(scaleX: 3, y: 3)
-            
         }) { (success) -> Void in
-            UIView.animate(withDuration: 1.0, delay: 0, options: [], animations: { () -> Void in
-                
-                // during our animation change heartAnimationView to be 3X what it is on storyboard
-                self.heartAnimationView.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-                
-            }) { (success) -> Void in
                 self.heartAnimationView.isHidden = true
-            }
         }
-         likeButtonClicked(likeButton)
+        
+        likeButtonClicked(likeButton)
 
     }
     
